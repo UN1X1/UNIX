@@ -1,0 +1,19 @@
+import random
+
+
+def prs(value):
+    lst = ['Rock', 'Paper', 'Scissors']
+    if value in lst:
+        answer = random.choice(lst)
+        print(f'Your choice: {value}\t Opponentʼs choice: {answer}')
+        if lst.index(value) - 1 == lst.index(answer):
+            print('You win')
+        elif lst.index(value) == lst.index(answer):
+            print('Draw')
+        else:
+            print('You lose')
+    else:
+        print('Play by rules!')
+
+
+prs(input(':'))
